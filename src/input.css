@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+
+
+@font-face {
+    font-family: alata;
+    src: url(/fonts/Alata-Regular.ttf);
+}
+
+@font-face {
+    font-family: jose;
+    src: url(/fonts/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: jose-light;
+    src: url(/fonts/JosefinSans-Light.ttf);
+}
+@theme{
+    --font-alata:alata;
+    --font-jose: jose;
+    --font-joseLight:jose-light;
+}
+
+.creation-card {
+    @apply relative w-full h-[500px]  bg-cover bg-center bg-black/40 transition-all scale-105 duration-300 ease-in-out
+     overflow-hidden cursor-pointer  flex   p-4 text-white uppercase;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+  
+ .creation-text{
+    font-family: jose-light;
+    font-weight: 300;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    position: absolute; 
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    z-index: 0;
+  } 
+
+
+.creation-card:hover {
+    transform: scale(1.03);
+  }
+  
+
+.creation-card:hover .creation-text {
+    transform: translateY(-10px);
+  }
+.creation-card:hover::before {
+    transform: scale(1.05);
+  }
